@@ -15,17 +15,7 @@ const Calculator = () => {
 
     const pattern = /^[+]?\d+(\.\d+)?$|^-?\d+(\.\d+)?$/;
 
-    let num1Ele = document.getElementById("num-1");
-    let num2Ele = document.getElementById("num-2");
-    num1Ele.addEventListener("focus", function(){
-        setstatus("");
-        setMsg("");
-    })
-
-    num2Ele.addEventListener("focus", function(){
-        setstatus("");
-        setMsg("");
-    })
+    
 
 
     function validateAndCalculate(operation){
@@ -61,6 +51,20 @@ const Calculator = () => {
                     break;
             }
 
+            let num1Ele = document.getElementById("num-1");
+            let num2Ele = document.getElementById("num-2");
+
+            num1Ele.addEventListener("focus", function(){
+                setstatus("");
+                setMsg("");
+            })
+
+            num2Ele.addEventListener("focus", function(){
+                setstatus("");
+                setMsg("");
+            })
+
+
             
         }else{
     
@@ -68,9 +72,24 @@ const Calculator = () => {
             setMsg("Enter valid Number");
             setClassName("red");
 
-            
+            let num1Ele = document.getElementById("num-1");
+            let num2Ele = document.getElementById("num-2");
+
+            num1Ele.addEventListener("focus", function(){
+                setstatus("");
+                setMsg("");
+            })
+
+            num2Ele.addEventListener("focus", function(){
+                setstatus("");
+                setMsg("");
+            })
+
+
             num1Ele.value = "";            
             num2Ele.value = "";
+
+            
 
            
         }
