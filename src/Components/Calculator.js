@@ -15,7 +15,10 @@ const Calculator = () => {
 
     const pattern = /^[+]?\d+(\.\d+)?$|^-?\d+(\.\d+)?$/;
 
-    
+    function removeStatusAndMsg(){
+        setstatus("");
+        setMsg("");
+    }
 
 
     function validateAndCalculate(operation){
@@ -51,18 +54,7 @@ const Calculator = () => {
                     break;
             }
 
-            let num1Ele = document.getElementById("num-1");
-            let num2Ele = document.getElementById("num-2");
-
-            num1Ele.addEventListener("focus", function(){
-                setstatus("");
-                setMsg("");
-            })
-
-            num2Ele.addEventListener("focus", function(){
-                setstatus("");
-                setMsg("");
-            })
+            
 
 
             
@@ -75,17 +67,6 @@ const Calculator = () => {
             let num1Ele = document.getElementById("num-1");
             let num2Ele = document.getElementById("num-2");
 
-            num1Ele.addEventListener("focus", function(){
-                setstatus("");
-                setMsg("");
-            })
-
-            num2Ele.addEventListener("focus", function(){
-                setstatus("");
-                setMsg("");
-            })
-
-
             num1Ele.value = "";            
             num2Ele.value = "";
 
@@ -97,8 +78,8 @@ const Calculator = () => {
 
     return (
         <div className="calc-cont">
-            <input type = "text" placeholder="Enter first Number" className="input" onChange={(event) => setNum1(event.target.value)} id = "num-1"/>
-            <input type = "text" placeholder = "Enter second Number" className="input" onChange={(event) => setNum2(event.target.value)} id = "num-2"/>
+            <input type = "text" placeholder="Enter first Number" className="input" onChange={(event) => setNum1(event.target.value)} onFocus = {removeStatusAndMsg} id = "num-1"/>
+            <input type = "text" placeholder = "Enter second Number" className="input" onChange={(event) => setNum2(event.target.value)} onFocus = {removeStatusAndMsg} id = "num-2"/>
 
             <div className="button-cont">
                 <button className="button" onClick={() => validateAndCalculate('add')}> + </button>
