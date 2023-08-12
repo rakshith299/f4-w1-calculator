@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/f4-w1-calculator/static/css/main.b9edf129.css",
+    "main.js": "/f4-w1-calculator/static/js/main.d1221363.js",
+    "index.html": "/f4-w1-calculator/index.html",
+    "main.b9edf129.css.map": "/f4-w1-calculator/static/css/main.b9edf129.css.map",
+    "main.d1221363.js.map": "/f4-w1-calculator/static/js/main.d1221363.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b9edf129.css",
+    "static/js/main.d1221363.js"
+  ]
+}
